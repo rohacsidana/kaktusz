@@ -1,0 +1,110 @@
+/*a maradék word-css dolgokat megcsinálni*/
+body {
+  font-family: Arial, Verdana, sans-serif;
+  color: beige;
+  font-size: 10pt;
+  margin: 0;
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "h h h h h h"
+    "n n n n n n"
+    "as as a a a a"
+    "f f f f f f";
+    width: 90%;
+    max-width: 900px;
+  background-color: rgb(238, 238, 238);
+  margin: auto;
+}
+
+main,
+header,
+nav,
+aside,
+article,
+footer {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px;
+}
+header,
+nav,
+aside,
+article,
+footer {
+  background-color: aqua;
+  border: 1px solid cadetblue;
+  border-radius: 5px;
+}
+header {
+  color: black;
+  font-weight: bolder;
+  grid-area: h;
+  padding: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 10px;
+  background-image: url(kepek/terkep.jpg);
+  object-fit: cover;
+  max-height: 300px;
+}
+nav li {
+  text-decoration: none;
+  list-style-type: none;
+  display: inline-block;
+  grid-template-rows: 1fr;
+  margin: 20px;
+  font-size: 15px;
+  padding: 20px;
+  background-color: cadetblue;
+  border-radius: 5px;
+}
+nav li:hover {
+  background-color: rgb(250, 173, 85);
+}
+nav li a:hover {
+  color: cadetblue;
+  text-decoration: none;
+}
+nav li a {
+  color: aqua;
+  font-weight: bolder;
+}
+nav {
+  background-color: cadetblue;
+  grid-area: n;
+  display: grid;
+}
+aside img {
+  max-width: 300px;
+}
+aside {
+  max-width: 300px;
+  grid-area: as;
+  text-align: center;
+}
+article {
+  color: black;
+  grid-area: a;
+  text-align: justify;
+}
+article li {
+  list-style-type: decimal;
+}
+footer {
+  color: white;
+  grid-area: f;
+  text-align: center;
+}
+@media screen and (max-width: 700px) {
+  main {
+    display: grid;
+    grid-template-areas:
+      "h"
+      "n"
+      "as"
+      "a"
+      "f";
+  }
+}
